@@ -14,7 +14,7 @@ function Hero() {
         </h1>
 
         <p className="hero_description">
-          I’m a frontend engineer with 4+ years of experience building
+          I'm a frontend engineer with 4+ years of experience building
           scalable web applications, real-time interfaces, and AI-powered
           products, with a focus on performance and user experience.
         </p>

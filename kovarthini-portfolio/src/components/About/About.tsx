@@ -14,7 +14,7 @@ function About() {
 
         <div className="about_content">
           <p>
-            I’m a frontend engineer focused on building scalable web
+            I'm a frontend engineer focused on building scalable web
             applications with React and TypeScript. My work has involved
             AI-powered products, real-time interfaces, search platforms, and
             performance-focused frontend development.

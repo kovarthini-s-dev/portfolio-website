@@ -62,7 +62,7 @@ function Navbar() {
             aria-expanded={isMenuOpen}
             aria-controls="main-navigation"
           >
-            {isMenuOpen ? "×" : "☰"}
+            {isMenuOpen ? "x" : "☰"}
           </button>
         </div>
       </nav>
