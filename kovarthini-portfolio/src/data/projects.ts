@@ -1,0 +1,140 @@
+export const projects = [
+  {
+    title: "GenAI-powered Smart Search",
+    category: "Professional",
+    description:
+      "A modern search experience combining AI-powered capabilities with a responsive frontend, real-time interactions, and a focus on performance and accessibility.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "LLM Streaming",
+      "REST APIs",
+      "SCSS",
+    ],
+    details: [
+      "Worked on the frontend architecture and migration from legacy jQuery to React.",
+      "Implemented and maintained streaming experiences for AI-generated responses.",
+      "Improved frontend performance through bundle optimization, code splitting, lazy loading, and PageSpeed improvements.",
+      "Worked on responsive UI, accessibility, cross-browser compatibility, and Safari-specific issues.",
+    ],
+    clients: ["HDFC", "Axis", "Tata Capital", "Moneyfy"],
+    confidential: true,
+  },
+  {
+    title: "KBot",
+    category: "Professional",
+    description:
+      "An AI-powered knowledge assistance platform that brings bot creation, training, analytics, activity tracking, chat, voice, and search experiences together in a unified dashboard.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "JavaScript",
+      "Jest",
+      "Realtime APIs",
+      "WebSocket",
+      "LLM Streaming",
+      "Speech-to-Text",
+      "Text-to-Speech",
+    ],
+    details: [
+      "Built frontend experiences for creating and managing knowledge assistants.",
+      "Enabled bot training using documents and web-based sources.",
+      "Worked across chat, voice, and search experiences within the platform.",
+      "Implemented real-time interactions using WebSocket and streaming APIs.",
+      "Worked with LLM streaming, Speech-to-Text, and Text-to-Speech capabilities.",
+      "Built dashboard experiences for monitoring training, activity, and knowledge-assistant usage.",
+      "Added frontend testing using Jest.",
+    ],
+    clients: [],
+    confidential: true,
+  },
+  {
+    title: "Voice Search Assistant",
+    category: "Professional",
+    description:
+      "A real-time voice interaction experience designed around speech input, streamed responses, and conversational frontend interactions.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "WebSocket",
+      "Speech-to-Text",
+      "Text-to-Speech",
+      "Streaming APIs",
+    ],
+    details: [
+      "Built frontend experiences for real-time voice interactions.",
+      "Integrated WebSocket-based communication for streaming data.",
+      "Worked with Speech-to-Text and Text-to-Speech capabilities.",
+      "Handled real-time UI states and cross-browser compatibility.",
+    ],
+    clients: [],
+    confidential: true,
+  },
+  {
+    title: "Summary Bot",
+    category: "Professional",
+    description:
+      "An AI-powered experience that summarizes the content of a webpage and presents the generated information in a concise format.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Streaming",
+    ],
+    details: [
+      "Built the frontend experience for summarizing content from a specific webpage.",
+      "Implemented streaming responses to progressively display generated summaries.",
+      "Worked on the interface for presenting summarized page content clearly.",
+    ],
+    clients: ["Axis Bank"],
+    confidential: true,
+  },
+  {
+    title: "Enterprise Chatbot Suite",
+    category: "Professional",
+    description:
+      "A collection of conversational AI experiences built for different enterprise use cases and client requirements.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "REST APIs",
+      "Streaming APIs",
+    ],
+    details: [
+      "Contributed to frontend development across multiple chatbot proof-of-concepts.",
+      "Worked on reusable UI patterns and conversational interfaces.",
+      "Handled API integration and frontend state changes for chatbot interactions.",
+      "Worked across different client requirements and browser environments.",
+    ],
+    clients: [
+      "PML Sonic",
+      "Reckitt",
+      "Philips",
+      "Cenomi",
+      "Coherent",
+    ],
+    confidential: true,
+  },
+  {
+    title: "Smart Search Platform",
+    category: "Professional",
+    description:
+      "A reusable search platform developed across multiple client products with an emphasis on responsive UI, performance, and maintainability.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "jQuery",
+      "REST APIs",
+      "SCSS",
+    ],
+    details: [
+      "Developed reusable frontend components for search experiences.",
+      "Worked on responsive layouts and cross-browser compatibility.",
+      "Integrated REST APIs and handled frontend search interactions.",
+      "Worked on frontend performance improvements.",
+    ],
+    clients: ["Axis", "Tata Capital", "Moneyfy"],
+    confidential: true,
+  },
+];
