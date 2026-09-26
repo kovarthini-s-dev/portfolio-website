@@ -93,5 +93,11 @@ body {
 }
 
 .section {
-  padding-block: 120px;
+  padding-block: 72px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 56px;
+  }
 }

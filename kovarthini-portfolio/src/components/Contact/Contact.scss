@@ -1,0 +1,122 @@
+.contact {
+  border-top: 1px solid var(--border);
+}
+
+.contact_container {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: 64px;
+  align-items: start;
+}
+
+.contact_heading {
+  max-width: 620px;
+}
+
+.contact_eyebrow {
+  margin-bottom: 14px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact_title {
+  max-width: 620px;
+  margin-bottom: 20px;
+  font-size: clamp(40px, 4.2vw, 56px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.contact_description {
+  max-width: 540px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.contact_links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.contact_link {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition:
+    padding-left 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact_link:hover {
+  padding-left: 6px;
+}
+
+.contact_link-label {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact_link-value {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.contact_link-arrow {
+  color: var(--text);
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.contact_link:hover .contact_link-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 768px) {
+  .contact_container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact_title {
+    font-size: clamp(38px, 9vw, 48px);
+  }
+
+  .contact_description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_link {
+    grid-template-columns: 1fr auto;
+    gap: 8px 16px;
+  }
+
+  .contact_link-label {
+    grid-column: 1 / -1;
+  }
+
+  .contact_link-value {
+    grid-column: 1;
+  }
+
+  .contact_link-arrow {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
