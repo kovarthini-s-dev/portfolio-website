@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useId } from "react";
 import type { Project } from "../../types/project";
+import "./Projects.scss";
 
 interface ProjectModalProps {
   project: Project;
@@ -7,6 +8,8 @@ interface ProjectModalProps {
 }
 
 function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const titleId = useId();
+
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -14,34 +17,44 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
       }
     };
 
+    const originalOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleEscape);
 
     return () => {
+      document.body.style.overflow = originalOverflow;
       document.removeEventListener("keydown", handleEscape);
     };
   }, [onClose]);
 
   return (
-    <div className="project_modal" role="presentation" onClick={onClose}>
+    <div
+      className="project_modal"
+      role="presentation"
+      onClick={onClose}
+    >
       <div
         className="project_modal-content"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="project-modal-title"
+        aria-labelledby={titleId}
         onClick={(event) => event.stopPropagation()}
       >
         <button
           type="button"
           className="project_modal-close"
           onClick={onClose}
-          aria-label="Close project details"
+          aria-label={`Close ${project.title} details`}
         >
-          x
+          <span aria-hidden="true">x</span>
         </button>
 
-        <p className="project_modal-category">{project.category}</p>
+        <p className="project_modal-category">
+          {project.category}
+        </p>
 
-        <h3 id="project-modal-title" className="project_modal-title">
+        <h3 id={titleId} className="project_modal-title">
           {project.title}
         </h3>
 
