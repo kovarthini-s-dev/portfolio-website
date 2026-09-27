@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <nav className="navbar_container">
+      <nav className="navbar_container" aria-label="Main navigation">
         <a className="navbar_logo" href="#home" onClick={closeMenu}>
           Kovarthini
         </a>
@@ -62,7 +62,9 @@ function Navbar() {
             aria-expanded={isMenuOpen}
             aria-controls="main-navigation"
           >
-            {isMenuOpen ? "x" : "☰"}
+            <span aria-hidden="true">
+              {isMenuOpen ? "x" : "☰"}
+            </span>
           </button>
         </div>
       </nav>

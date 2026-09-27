@@ -4,26 +4,28 @@ import "./ThemeToggle.scss";
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
+  const isDark = theme === "dark";
+
   return (
     <button
       type="button"
-      className={`theme-toggle ${
-        theme === "dark" ? "theme-toggle--dark" : ""
-      }`}
+      className="theme_toggle"
       onClick={toggleTheme}
-      aria-label={`Switch to ${
-        theme === "light" ? "dark" : "light"
-      } mode`}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={isDark}
     >
-      <span className="theme-toggle__sun" aria-hidden="true">
-        ☀
+      <span
+        className={`theme_toggle-icon ${
+          isDark ? "theme_toggle-icon-dark" : ""
+        }`}
+        aria-hidden="true"
+      >
+        {isDark ? "☾" : "☀"}
       </span>
 
-      <span className="theme-toggle__moon" aria-hidden="true">
-        ☾
+      <span className="theme_toggle-text">
+        {isDark ? "Dark" : "Light"}
       </span>
-
-      <span className="theme-toggle__knob" />
     </button>
   );
 }

@@ -81,7 +81,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding-block: 96px 72px;
+    padding-block: 56px 64px;
   }
 
   .hero_title {
@@ -94,6 +94,21 @@
 }
 
 @media (max-width: 520px) {
+  .hero_actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero_button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-block: 48px 56px;
+  }
+
   .hero_actions {
     flex-direction: column;
     align-items: stretch;
