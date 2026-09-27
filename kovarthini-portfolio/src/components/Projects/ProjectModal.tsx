@@ -1,4 +1,4 @@
-import { useEffect, useId } from "react";
+import { useEffect, useId, useRef } from "react";
 import type { Project } from "../../types/project";
 import "./Projects.scss";
 
@@ -9,8 +9,11 @@ interface ProjectModalProps {
 
 function ProjectModal({ project, onClose }: ProjectModalProps) {
   const titleId = useId();
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    const previousActiveElement = document.activeElement as HTMLElement | null;
+
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         onClose();
@@ -22,9 +25,13 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleEscape);
 
+    closeButtonRef.current?.focus();
+
     return () => {
       document.body.style.overflow = originalOverflow;
       document.removeEventListener("keydown", handleEscape);
+
+      previousActiveElement?.focus();
     };
   }, [onClose]);
 
@@ -42,6 +49,7 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
         onClick={(event) => event.stopPropagation()}
       >
         <button
+          ref={closeButtonRef}
           type="button"
           className="project_modal-close"
           onClick={onClose}

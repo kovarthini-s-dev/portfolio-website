@@ -37,6 +37,7 @@ function Contact() {
             href="https://www.linkedin.com/in/kovarthini-sathya-9204b6216"
             target="_blank"
             rel="noreferrer"
+            aria-label="Open my LinkedIn profile in a new tab"
           >
             <span className="contact_link-label">LinkedIn</span>
             <span className="contact_link-value">
@@ -52,6 +53,7 @@ function Contact() {
             href="https://github.com/kovarthini-s-dev"
             target="_blank"
             rel="noreferrer"
+            aria-label="Open my GitHub profile in a new tab"
           >
             <span className="contact_link-label">GitHub</span>
             <span className="contact_link-value">
