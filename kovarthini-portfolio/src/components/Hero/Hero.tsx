@@ -27,6 +27,14 @@ function Hero() {
           <a className="hero_button hero_button-secondary" href="#contact">
             Contact Me
           </a>
+
+          <a
+            className="hero_button hero_button-secondary"
+            href="/resume.pdf"
+            download="Kovarthini-Sathya-Resume.pdf"
+          >
+            Download Resume
+          </a>
         </div>
       </div>
     </section>
