@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from "../types/project";
+
+export const projects: Project[] =  [
   {
     title: "GenAI-powered Smart Search",
     category: "Professional",
